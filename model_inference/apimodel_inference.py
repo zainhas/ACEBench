@@ -37,9 +37,15 @@ class APIModelInference(BaseHandler):
         if "gpt" in self.model_name:
             api_key = os.getenv("GPT_AGENT_API_KEY")
             base_url = os.getenv("GPT_BASE_URL")
-        elif "deepseek-r1" in self.model_name:
-            api_key = os.getenv("DEEPSEEK_API_KEY")
-            base_url = os.getenv("DEEPSEEK_BASE_URL")
+        elif "deepseek" in self.model_name:
+            api_key = os.getenv("TOGETHER_API_KEY")
+            base_url = os.getenv("TOGETHER_BASE_URL")
+        elif "moonshotai" in self.model_name:
+            api_key = os.getenv("TOGETHER_API_KEY")
+            base_url = os.getenv("TOGETHER_BASE_URL")
+        elif "meta" in self.model_name:
+            api_key = os.getenv("TOGETHER_API_KEY")
+            base_url = os.getenv("TOGETHER_BASE_URL")
         elif "o1" in self.model_name:
             api_key = os.getenv("GPT_AGENT_API_KEY")
             base_url = os.getenv("GPT_BASE_URL")
